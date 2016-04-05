@@ -1,8 +1,0 @@
-com\bios\repository\ContactoFacade.class
-com\bios\controller\CountContactosController.class
-com\bios\controller\ListContactosController.class
-com\bios\repository\HibernateUtil.class
-com\bios\controller\SearchContactosController.class
-com\bios\controller\AddContactosController.class
-com\bios\entity\Contacto.class
-com\bios\repository\JPAFacade.class

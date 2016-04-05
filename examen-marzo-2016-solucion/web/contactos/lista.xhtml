@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Agenda</title>
+	<h:outputStylesheet library="webjars"
+		name="bootstrap/3.3.6/css/bootstrap.min.css" />
+	<h:outputScript library="webjars" name="jquery/1.11.1/jquery.min.js" />
+</h:head>
+<h:body>
+	<div class="container-fluid">
+		<h2 class="sub-header">Lista de contactos</h2>
+		<h:form>
+			<div class="table-responsive">
+				<h:dataTable value="#{listContactosController.contactos}"
+					var="contacto" styleClass="table table-striped">
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="ID" />
+						</f:facet>
+						#{contacto.id}
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Nombre" />
+						</f:facet>
+						#{contacto.nombre}
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Email" />
+						</f:facet>
+						#{contacto.email}
+					</h:column>
+				</h:dataTable>
+			</div>
+			<h:outputLink value="../index.html">
+				Regresar
+			</h:outputLink>
+		</h:form>
+	</div>
+</h:body>
+</html>
+

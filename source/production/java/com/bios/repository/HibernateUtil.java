@@ -24,7 +24,9 @@ public class HibernateUtil implements ServletContextListener {
 
 	@Override
 	public void contextDestroyed(ServletContextEvent event) {
+            if(emf!=null&&emf.isOpen()){
 		emf.close();
+            }
 	}
 
 	public static EntityManager createEntityManager() {
